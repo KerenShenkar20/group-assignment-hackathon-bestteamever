@@ -2,6 +2,8 @@
 
 
 const GameReq = require('../models/gameReq');
+const User = require('../Models/user');
+const { userDbcontroller } = require('./user.ctrl');
 
 exports.gameReqontroller = {
     getReq(req, res) {
@@ -18,19 +20,31 @@ exports.gameReqontroller = {
     },
 
     addReq(req, res) {
-        const newUser = new GameReq(req.body);
-        const result = newUser.save()
-            .then(result => {
-                if (result) {
-                    res.json(result)
-        
+        const newReq = new GameReq(req.body);
+        User.findOne({ id: newReq.userId })
+            .then(user => {
+                if(user)
+                {
+                    const result = newReq.save()
+                    .then(result => {
+                        if (result) {
+                            res.json(result)
+
+                        }
+                        else {
+                            res.status(404).send("Error saving a request");
+                        }
+                    })
+                    .catch(err => console.log('Error saving the data from db: ${err}'))
                 }
-                else {
-                    res.status(404).send("Error saving a user");
+                else{
+                    res.status(404).send("Error invalid user");
                 }
+                
+
             })
-            .catch(err => console.log('Error saving the data from db: ${err}'))
-        
+
+
 
 
     },
