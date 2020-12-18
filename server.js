@@ -14,6 +14,9 @@ app.use((req, res, next) => {
 });
 
 app.use("/api/users", UserRouter);
+app.use("/api/", UserRouter);
+app.use("/api/users", UserRouter);
+
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).send('Something is broken!');
