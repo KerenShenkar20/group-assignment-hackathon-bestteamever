@@ -5,7 +5,7 @@ $(document).ready(function () {
 
 function getAllSchedules() {
     $.ajax({
-        url: 'http://localhost:3000//api/schedules',
+        url: 'https://bestteamever-hackathon.herokuapp.com/api/schedules',
         type: 'GET',
         success: function(schedules) {
             recreateSchTable(schedules);
