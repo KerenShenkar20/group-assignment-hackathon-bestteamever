@@ -6,7 +6,7 @@ $(document).ready(function () {
 
 function getAllSchedules() {
     $.ajax({
-        url: `http://localhost:3000/api/schedules`,
+        url: '/api/schedules',
         type: 'GET',
         success: function(schedules) {
             recreateSchTable(schedules);
