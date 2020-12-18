@@ -17,9 +17,9 @@ function appendTableRow(id, date, time, game)
 {
     let tableRow = "<tr><td>$userId</td><td>$date</td><td>$time</td><td>$game</td>";
     tableRow = tableRow.replace("$userId",id);
-    tableRow = tableRow.replace("$first_name",date);
-    tableRow = tableRow.replace("$last_name",time);        
-    tableRow = tableRow.replace("$date",game);        
+    tableRow = tableRow.replace("$date",date);
+    tableRow = tableRow.replace("$time",time);        
+    tableRow = tableRow.replace("$game",game);        
     $("#schTable tbody").append(tableRow);
 }
 
