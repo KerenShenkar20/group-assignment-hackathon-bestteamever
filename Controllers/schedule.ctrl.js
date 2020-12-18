@@ -7,7 +7,7 @@ exports.scheduleDbcontroller = {
             then(docs => { res.json(docs) })
             .catch(err => console.log('Erorr getting the data from db: ${err}'));
     },
-    getSchedule(req, res) {
+    getSchedules(req, res) {
         let filter= { };
         if('date' in req.query)
             filter.date=req.query.date;
