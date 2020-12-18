@@ -3,10 +3,10 @@ const {gameReqontroller}= require('../Controllers/gameReq.ctrl');
 
 const ReqRouter= new Router;
 
-userRouter.get('/', gameReqontroller.getReqs);
-userRouter.get('/:id', gameReqontroller.getReq);
-userRouter.post('/', gameReqontroller.addReq);
-userRouter.put('/:id', gameReqontroller.updateReq);
-userRouter.delete('/:id', gameReqontroller.deleteReq);
+ReqRouter.get('/', gameReqontroller.getReqs);
+ReqRouter.get('/:id', gameReqontroller.getReq);
+ReqRouter.post('/', gameReqontroller.addReq);
+ReqRouter.put('/:id', gameReqontroller.updateReq);
+ReqRouter.delete('/:id', gameReqontroller.deleteReq);
 
 exports.ReqRouter = ReqRouter;
