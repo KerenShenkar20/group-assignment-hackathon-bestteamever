@@ -6,4 +6,6 @@ const scheduleSchema = new Schema({
     date: { type: Date},
     time: { type: Number},
     game: { type: String},
-}, {collection: 'orders'});
+}, {collection: 'schedules'});
+const Schedule = model('Schedule', scheduleSchema);
+module.exports = Schedule;
