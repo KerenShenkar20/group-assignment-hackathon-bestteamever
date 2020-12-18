@@ -3,6 +3,9 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 const{userRouter}= require("./Routers/user.router");
+const{ReqRouter}= require("./Routers/gemeReq.router");
+const{scheduleRouter}= require("./Routers/schedule.router");
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
