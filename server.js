@@ -14,8 +14,8 @@ app.use((req, res, next) => {
 });
 
 app.use("/api/users", UserRouter);
-app.use("/api/", UserRouter);
-app.use("/api/users", UserRouter);
+app.use("/api/request", ReqRouter);
+app.use("/api/schedule", scheduleRouter);
 
 app.use((err, req, res, next) => {
     console.error(err.stack);
