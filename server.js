@@ -13,7 +13,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use("/api/users", UserRouter);
+app.use("/api/users", userRouter);
 app.use("/api/request", ReqRouter);
 app.use("/api/schedule", scheduleRouter);
 
