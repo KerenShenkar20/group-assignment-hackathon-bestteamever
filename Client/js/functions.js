@@ -25,7 +25,6 @@ function appendTableRow(id, first_name, last_name, date, hour, gameName)
     tableRow = tableRow.replace("$hour",hour);        
     tableRow = tableRow.replace("$gameName", gameName);              
     $("#usersTable tbody").append(tableRow);
-    $('#usersTable tr:last').css("color", color);
 }
 
 function recreateUsersTable(users) {
