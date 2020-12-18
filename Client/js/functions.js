@@ -37,7 +37,6 @@ function recreateSchTable(users) {
 
 function operationsListeners() {
     $("#show-button").click(() => {
-        $("#get-users").css("display", "block");
         getAllSchedules();
     });
 
