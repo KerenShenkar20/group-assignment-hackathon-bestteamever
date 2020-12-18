@@ -1,4 +1,4 @@
-const Schedule = require('../models/schedule');
+const Schedule = require('../Models/schedule');
 
 exports.scheduleDbcontroller = {
     getSchedule(req, res) {

@@ -1,9 +1,8 @@
 ///Gamerequests CRUD controler
 
 
-const GameReq = require('../models/gameReq');
+const GameReq = require('../Models/gameReq');
 const User = require('../Models/user');
-const { userDbcontroller } = require('./user.ctrl');
 
 exports.gameReqontroller = {
     getReq(req, res) {
