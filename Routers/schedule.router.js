@@ -5,9 +5,9 @@ const scheduleRouter= new Router;
 
 scheduleRouter.get('/', scheduleDbcontroller.getSchedules);
 scheduleRouter.get('/:id', scheduleDbcontroller.getSchedule);
-userRouter.post('/', scheduleDbcontroller.addSchedule);
-userRouter.put('/:id', scheduleDbcontroller.updateSchedule);
-userRouter.delete('/:id', scheduleDbcontroller.deleteSchedule);
+scheduleRouter.post('/', scheduleDbcontroller.addSchedule);
+scheduleRouter.put('/:id', scheduleDbcontroller.updateSchedule);
+scheduleRouter.delete('/:id', scheduleDbcontroller.deleteSchedule);
 
 exports.ScheduleRouter = scheduleRouter;
 
