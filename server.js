@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 3000;
 
-const{UserRouter}= require("./Routers/user.router");
+const{userRouter}= require("./Routers/user.router");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
