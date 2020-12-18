@@ -1,10 +1,11 @@
 const express = require("express");
-const { ReqRouter } = require("./Routers/gemeReq.router");
-const { ScheduleRouter } = require("./Routers/schedule.router");
 const app = express();
 const port = process.env.PORT || 3000;
 
-const{UserRouter}= require("./Routers/user.router");
+const{userRouter}= require("./Routers/user.router");
+const{ReqRouter}= require("./Routers/gameReq.router");
+const{scheduleRouter}= require("./Routers/schedule.router");
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -15,11 +16,9 @@ app.use((req, res, next) => {
     next();
 });
 
-
-
-app.use("/api/users", UserRouter);
+app.use("/api/users", userRouter);
 app.use("/api/request", ReqRouter);
-app.use("/api/schedule", ScheduleRouter);
+app.use("/api/schedule", scheduleRouter);
 
 app.use((err, req, res, next) => {
     console.error(err.stack);
