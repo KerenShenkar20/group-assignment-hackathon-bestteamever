@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoos');
+const { Schema, model } = require('mongoose');
 
 const scheduleSchema = new Schema({
     id: { type: Number},
